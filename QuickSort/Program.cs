@@ -62,6 +62,27 @@ namespace QuickSort
             j = high;
 
             pivot = arr[low];
+
+            while (i <= j)
+            {
+                //search for an element greater than pivot
+                while((arr[i] <= pivot) && (arr[j] <= high))
+                {
+                    i++;
+                    cmp_count++;
+                }
+                cmp_count++;
+
+                //search for an element less than or equal to pivot
+                while((arr[j] > pivot) && (arr[j] >= low))
+                {
+                    j++;
+                    cmp_count++;
+                }
+                cmp_count++;
+
+
+            }
         }
 
         static void Main(string[] args)
