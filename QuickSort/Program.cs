@@ -96,7 +96,24 @@ namespace QuickSort
                 swap(low,j);
                 mov_count++;
             }
+            //sort the list on the left of pivot using quick sort
+            q_sort(low,j - 1);
 
+            //sort the list on the right of pivot using quick sort
+            q_sort(j + 1, high);
+        }
+        void display()
+        {
+            Console.WriteLine("\n---------------------");
+            Console.WriteLine(" Sorted array elements ");
+            Console.WriteLine("\n---------------------");
+
+            for (int j = 0; j < n; j++)
+            {
+                Console.WriteLine(arr[j]);
+            }
+            Console.WriteLine("\nNumber of comparisons: " + cmp_count);
+            Console.WriteLine("\nNumber of data movemenets: " + mov_count);
         }
 
         static void Main(string[] args)
