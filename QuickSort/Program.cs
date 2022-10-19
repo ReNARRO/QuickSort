@@ -116,6 +116,11 @@ namespace QuickSort
             Console.WriteLine("\nNumber of data movemenets: " + mov_count);
         }
 
+        int getsize()
+        {
+            return(n);
+        }
+
         static void Main(string[] args)
         {
         }
